@@ -64,7 +64,7 @@ try {
                 }
                 if($linha['usuario']==$login && $linha['senha']==$senha && $linha['tipo']=="B")
                 {
-                    
+                    $_SESSION['usuario']= $linha['usuario'];
                     header("location:usuario.php");
                 }
                 }

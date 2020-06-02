@@ -33,16 +33,11 @@
 <body>
     
 
-    <fieldset id="chamado"><legend>Ocorrências</legend>
-    
-            </select>
-            <br>
+   
     </form>
-    <a href="cadastroUsuario.php"><button style="background:  #404040; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size:20px;">Cadastrar Usuários</button></a>        	        	 
-    <a href="cadastroOcorrencias.php"><button style="background:  #404040; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size:20px;">Cadastrar Ocorrências</button></a> 
-       	        	 
-    </form>
+<?php
 
+?>
         
 
 </body>
