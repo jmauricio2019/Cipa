@@ -8,7 +8,7 @@
 
 <style>
     body{
-      background-color: #e6e6e6;
+      background-color: #ffff99;
       font-size: 30px;
       color: #606060;
       display: block;
@@ -59,7 +59,6 @@ try {
             $conecta->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $dados=$conecta->query("SELECT * FROM  login");
             foreach ($dados as $linha){
-                echo $linha['usuario']."----".$linha['senha']."----".$linha['tipo']."<br>";
                 if($linha['usuario']==$login && $linha['senha']==$senha && $linha['tipo']=="A")
                 {
                     $_SESSION['usuario']= $linha['usuario'];
@@ -70,8 +69,17 @@ try {
                     
                     header("location:usuario.php");
                 }
+                }
+                if($linha['usuario']!=$login || $linha['senha']!=$senha )
+                {
+                    echo '<script language="javascript">';
+                    echo 'alert("Usuário ou senha Incorretos")';
+                    echo '</script>';
+                }
+               
+                
                     
-            }
+                
         }//fecha try
         catch (PDOException $erro) 
         {
