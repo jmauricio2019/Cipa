@@ -62,7 +62,13 @@ try {
                 echo $linha['usuario']."----".$linha['senha']."----".$linha['tipo']."<br>";
                 if($linha['usuario']==$login && $linha['senha']==$senha && $linha['tipo']=="A")
                 {
+                    $_SESSION['usuario']= $linha['usuario'];
                     header("location:admistrador.php");
+                }
+                if($linha['usuario']==$login && $linha['senha']==$senha && $linha['tipo']=="B")
+                {
+                    
+                    header("location:usuario.php");
                 }
                     
             }

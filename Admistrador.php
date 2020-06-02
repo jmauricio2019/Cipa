@@ -1,8 +1,3 @@
-<?php
-    Session_start();
-    
-
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -34,10 +29,12 @@
     </style>
 
  <h2><p><u>SEGURANÇA EM PRIMEIRO LUGAR</u></p></h2>
-
 <body>
+    
+
     <fieldset id="chamado"><legend>Ocorrências</legend>
     <form action="#" name="gerador" method="POST">
+
         
         <p><label for="cusuario">Nome Funcionário:</label><input type="text" name="tUsuario" id="cUsuario" size="20" maxlength="30" placeholder="Usuario"/></p>
         <p><label for="cdata">Data:</label><input type="date" name="tData" id="cNomedoJogo" size="20" maxlength="12"/></p>
@@ -54,6 +51,11 @@
     <input type="submit" style="font-size: 20px; background-color: #404040;  color: #e6e6e6;" name="btn_gerar" value="Cadastrar Ocorrência"><br><br><br>
             	 
     </form>
+<?php
+session_start();
+
+echo"o usuario é  ".$_SESSION['usuario'];
+?>
         
 
 </body>
