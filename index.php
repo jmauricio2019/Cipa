@@ -34,25 +34,46 @@
     <fieldset id="chamado"><legend>Ocorrências</legend>
     <form action="#" name="gerador" method="POST">
         
-        <p><label for="cusuario">Nome Funcionário:</label><input type="text" name="tUsuario" id="cUsuario" size="20" maxlength="30" placeholder="Usuario"/></p>
-        <p><label for="cdata">Data:</label><input type="date" name="tData" id="cNomedoJogo" size="20" maxlength="12"/></p>
-        <p><label for="chora">Horario:</label><input type="time" name="tHora" id="cHora" size="5" maxlength="5" /></p>
-        <p><label for="cChamado">Tipo de Ocorrências:</label>
-            <select name="tChamado" id="cChamado">
-		<optgroup label="">
-                    <option value="imressora">Acidente com vítima</option>
-                    <option value="terminal">Acidente com perda material</option>
-                    <option value="senha">Incidente</option>
+        <p><label for="cusuario">Login:</label><input type="text" name="login" id="cUsuario" size="20" maxlength="30" placeholder="Usuario"/></p>
+        <p><label for="cdata">Senha:</label><input type="text" name="senha" id="cNomedoJogo" size="20" maxlength="12"/></p>
+       
+        
                     	
             </select>
             <br>
-    <input type="submit" style="font-size: 20px; background-color: #404040;  color: #e6e6e6;" name="btn_gerar" value="Cadastrar Ocorrência"><br><br><br>
+    <input type="submit" style="font-size: 20px; background-color: #404040;  color: #e6e6e6;" name="btn_entrar" value="Entrar"><br><br><br>
             	 
     </form>
         
 <?php
+session_start();
+if(isset($_POST['btn_entrar'])){
+// session_start inicia a sessão
 
+// as variáveis login e senha recebem os dados digitados na página anterior
+$login = $_POST['login'];
+$senha = $_POST['senha'];
+// as próximas 3 linhas são responsáveis em se conectar com o bando de dados.
+try {
+            $conecta= new PDO("mysql:host=127.0.0.1;port=3306;dbname=projeto_cipa","root","");
+            $conecta->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $dados=$conecta->query("SELECT * FROM  login");
+            foreach ($dados as $linha){
+                echo $linha['usuario']."----".$linha['senha']."----".$linha['tipo']."<br>";
+                if($linha['usuario']==$login && $linha['senha']==$senha && $linha['tipo']=="A")
+                {
+                    header("location:admistrador.php");
+                }
+                    
+            }
+        }//fecha try
+        catch (PDOException $erro) 
+        {
+            echo "Nao posso fazer a pesquisa";
+        }
+        
+}
 ?>
 </body>
-<p>Copyright &copy; 2020 - by Jose Maurico and Raphael Acacio.</p>
+<p>Copyright &copy; 2020 - by Jose Mauricio and Raphael Acacio.</p>
 </html>
