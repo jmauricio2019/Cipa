@@ -27,6 +27,7 @@
     }
  
     </style>
+    <div> <span style="float:right"><?php session_start();echo"o usuario é  ".$_SESSION['usuario'];?></span><br/></div>
 
  <h2><p><u>SEGURANÇA EM PRIMEIRO LUGAR</u></p></h2>
 <body>
@@ -52,9 +53,7 @@
             	 
     </form>
 <?php
-session_start();
 
-echo"o usuario é  ".$_SESSION['usuario'];
 ?>
         
 

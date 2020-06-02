@@ -25,9 +25,7 @@
     form {
         text-align:center;
     }
- 
-    </style>
-
+ </style>
  <h2><p><u>SEGURANÇA EM PRIMEIRO LUGAR</u></p></h2>
 
 <body>
