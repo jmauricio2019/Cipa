@@ -28,10 +28,11 @@
     </form>
         
 <?php
-session_start();
-include("bancoDados.php");
-$templogin = new Banco();
-$templogin->login();
+
+    include("bancoDados.php");
+    $templogin = new Banco();
+    $templogin->login();
+
 ?>
 </body>
 <br>

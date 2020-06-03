@@ -22,7 +22,8 @@
     <form action="#" name="gerador" method="POST">
 
         
-        <p><label for="cusuario">Nome Funcionário:</label><input type="text" name="tUsuario" id="cUsuario" size="20" maxlength="30" placeholder="Usuario"/></p>
+        
+        
         <p><label for="cdata">Data:</label><input type="date" name="tData" id="cNomedoJogo" size="20" maxlength="12"/></p>
         <p><label for="chora">Horario:</label><input type="time" name="tHora" id="cHora" size="5" maxlength="5" /></p>
         <p><label for="cChamado">Tipo de Ocorrências:</label>
