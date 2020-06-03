@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@font-face{
+	font-family: 'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {   /*  define cor de fundo da pagina */
+	
+	color: rgba(0, 0, 0, 0.7);   /*  define a cor e a transparencia da letra na pagina */
+	font-family: Arial, sans-serif;
+	background: url("../_imagens/cipa7.jpg") no-repeat;
+        background-color: #f2f2f2;
+        font-size: 30px;
+        color: #f2f2f2;
+        display: block;
+        width: 90%;
+        height: 123px;
+        margin: 0 auto;   
+}
+   
+ul{
+        font-size: 20px;
+}    
+
+a{
+        color: #606060;
+}
+
+form{
+        text-align:center;
+}
+
+header#cabecalho img#icone { /* posiciona a imagem do bolo */
+
+	position: absolute;
+	left: 1150px;
+	top: -15px ;
+        width: 200px ;
+        height: 200px ;
+}
+

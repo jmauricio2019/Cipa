@@ -4,42 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CIPA</title>
+    <link rel="stylesheet" type="text/css"href="_css/estilo.css"/>	
+    <link rel="stylesheet" href="_css/fotos.css">
 </head>
 
-<style>
-    body{
-      background-color: #ffff99;
-      font-size: 30px;
-      color: #606060;
-      display: block;
-      width: 90%;
-      height: 123px;
-      margin: 0 auto;
-    }   
-    ul{
-      font-size: 20px;
-    }    
-    a{
-      color: #606060;
-    }
-    form {
-        text-align:center;
-    }
- </style>
- <h2><p><u>SEGURANÇA EM PRIMEIRO LUGAR</u></p></h2>
-
 <body>
+    
+    	<header id="cabecalho">
+        <img id="icone" src="_imagens/logocipa.png" />
+
+            <h2><p><u>SEGURANÇA EM PRIMEIRO LUGAR</u></p></h2>
+
+        </header>
+
     <fieldset id="chamado"><legend>Ocorrências</legend>
     <form action="#" name="gerador" method="POST">
         
-        <p><label for="cusuario">Login:</label><input type="text" name="login" id="cUsuario" size="20" maxlength="30" placeholder="Usuario"/></p>
-        <p><label for="cdata">Senha:</label><input type="text" name="senha" id="cNomedoJogo" size="20" maxlength="12"/></p>
-       
-        
-                    	
-            </select>
-            <br>
-    <input type="submit" style="font-size: 20px; background-color: #404040;  color: #e6e6e6;" name="btn_entrar" value="Entrar"><br><br><br>
+            <p><label for="cusuario">Login:</label><input type="text" name="login" id="cUsuario" size="20" maxlength="30" placeholder="Usuario"/></p>
+            <p><label for="cdata">Senha:</label><input type="text" name="senha" id="cNomedoJogo" size="20" maxlength="12"/></p>        	
+            
+        <input type="submit" style="font-size: 20px; background-color: #404040;  color: #e6e6e6;" name="btn_entrar" value="Entrar"><br>
             	 
     </form>
         
@@ -74,18 +58,17 @@ try {
                     echo 'alert("Usuário ou senha Incorretos")';
                     echo '</script>';
                 }
-               
-                
                     
-                
         }//fecha try
         catch (PDOException $erro) 
         {
             echo "Nao posso fazer a pesquisa";
-        }
-        
+        }       
 }
 ?>
 </body>
+<br>
+</fieldset>
 <p>Copyright &copy; 2020 - by Jose Mauricio and Raphael Acacio.</p>
+<br>
 </html>

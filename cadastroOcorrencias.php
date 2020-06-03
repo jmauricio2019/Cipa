@@ -4,36 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração</title>
+    <link rel="stylesheet" type="text/css"href="_css/estilo.css"/>	
+    <link rel="stylesheet" href="_css/fotos.css">
 </head>
 
-<style>
-    body{
-      background-color: #e6e6e6;
-      font-size: 30px;
-      color: #606060;
-      display: block;
-      width: 90%;
-      height: 123px;
-      margin: 0 auto;
-    }   
-    ul{
-      font-size: 20px;
-    }    
-    a{
-      color: #606060;
-    }
-    form {
-        text-align:center;
-    }
- 
-    </style>
-    <div> <span style="float:right"><?php session_start();echo" ".$_SESSION['usuario'];?></span><br/></div>
+    <div> <span style="float:left"><?php session_start();echo" ".$_SESSION['usuario'];?></span><br/></div>
 
- <h2><p><u>SEGURANÇA EM PRIMEIRO LUGAR</u></p></h2>
 <body>
-    
+        <header id="cabecalho">
+        <img id="icone" src="_imagens/logocipa.png" />
 
-    <fieldset id="chamado"><legend>Ocorrências</legend>
+        <h2><p><u>SEGURANÇA EM PRIMEIRO LUGAR</u></p></h2>
+
+        </header>
+        
+    <fieldset id="chamado"><legend>Registro de Ocorrências</legend>
     <form action="#" name="gerador" method="POST">
 
         
@@ -45,9 +30,10 @@
 		<optgroup label="">
                     <option value="imressora">Acidente com vítima</option>
                     <option value="terminal">Acidente com perda material</option>
-                    <option value="senha">Incidente</option>
-                    	
+                    <option value="senha">Incidente</option>	
             </select>
+            <br><br>
+            <textarea rows="15" cols="70" maxlength="700">Descrição:</textarea>
             <br>
     <input type="submit" style="font-size: 20px; background-color: #404040;  color: #e6e6e6;" name="btn_gerar" value="Cadastrar Ocorrência"><br><br><br>
             	 
@@ -58,6 +44,8 @@
         
 
 </body>
+<br>
+</fieldset>
 <p>Copyright &copy; 2020 - by Jose Maurico and Raphael Acacio.</p>
 </html>
 
