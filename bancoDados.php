@@ -16,12 +16,12 @@ class Banco
             foreach ($dados as $linha){
                 if($linha['usuario']==$login && $linha['senha']==$senha && $linha['tipo']=="A")
                 {
-                    $_SESSION['usuario']= $linha['usuario'];
+                    $_SESSION['usuario']= $linha['nome'];
                     header("location:admistrador.php");
                 }
                 if($linha['usuario']==$login && $linha['senha']==$senha && $linha['tipo']=="B")
                 {
-                    $_SESSION['usuario']= $linha['usuario'];
+                    $_SESSION['usuario']= $linha['nome'];
                     header("location:usuario.php");
                 }
                 }

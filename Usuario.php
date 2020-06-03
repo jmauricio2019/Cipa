@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css"href="_css/estilo.css"/>	
     <link rel="stylesheet" href="_css/fotos.css">
 </head>
+<div> <span style="float:left"><?php session_start();echo" ".$_SESSION['usuario'];?></span><br/></div>
 
  <h2><p><u>Usúario</u></p></h2>
 
